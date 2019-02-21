@@ -15,8 +15,8 @@ public class DatasetRealInfo {
 	private static String[] datasetPathArray = new String[10 * numFile];
 	private String[] datasetSettingArray = new String[10 * numFile];
 
-	private String[] datasetName = new String[] { "elecNorm", "weather", "spam_corpus_x2_feature_selected", "usenet1_2/usenet1", "usenet1_2/usenet2", "airline",
-			"covtype" };
+	private String[] datasetName = new String[] { "elecNorm", "weather", "spam_corpus_x2_feature_selected", "usenet1", "usenet2", "airline",
+			"covtypeNorm" };
 	private String[] datasetClassIndex = new String[] { "9", "9", "501", "100", "100", "7","54" };
 	private Integer[] datasetNumClass = new Integer[] { 2, 2, 2, 2, 2, 2, 7 };
 	private int numDataType = datasetName.length;

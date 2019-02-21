@@ -27,11 +27,11 @@ public class RegionSet {
 		int knnCounter = 0;
 		double kDist = 0.0;
 		for (int _i : _idDistMap.keySet()) {
-			
+
 			if (_i == _id)
 				continue;
 			this.knnMap.get(_i).put(_id, _idDistMap.get(_i));
-			
+
 			if (this.knnRatio * (double) this.knnMap.size() <= 10.0)
 				continue;
 			Map<Integer, Double> tempSortedIdDistMap = ldd_Utils.sortByValue(this.knnMap.get(_i));
@@ -112,6 +112,10 @@ public class RegionSet {
 			return 0.0;
 		}
 		return this.knnWeight.get(_i);
+	}
+
+	public Map<Integer, Double> getKnnWeight() {
+		return this.knnWeight;
 	}
 
 	public double getSize() {
